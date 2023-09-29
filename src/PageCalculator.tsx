@@ -102,6 +102,8 @@ function PageCalculator() {
   return (
     <>
       <Box>
+        <h2>구현 중입니다...</h2>
+
         <Input
           value={value}
           onChange={(e) => {
