@@ -24,6 +24,9 @@ function Layout() {
         <div>
           <Link to='/timer'>page - timer</Link>
         </div>
+        <div>
+          <Link to='/calculator'>page - calculator</Link>
+        </div>
       </aside>
       <div
         style={{
