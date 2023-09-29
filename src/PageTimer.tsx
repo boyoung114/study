@@ -48,30 +48,8 @@ function PageTimer() {
     };
   }, [flag, time]);
 
-  const [count, setCount] = useState(5);
-
-  // useEffect(() => {
-  //   const id = setInterval(() => {
-  //     setCount((count) => count - 1);
-  //   }, 1000);
-  //   if (count === 0) {
-  //     clearInterval(id);
-  //   }
-  //   return () => {
-  //     clearInterval(id);
-  //     console.log('??');
-  //   };
-  // }, [count]);
-
-  // useEffect(() => {
-  //   if (time === 0) {
-  //     setFlag(false);
-  //   }
-  // }, [time]);
-
   return (
     <div className='App'>
-      <h1>{count}</h1>;
       <Box mt={2} textAlign={'center'}>
         <Typography
           variant='h2'

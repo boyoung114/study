@@ -1,13 +1,13 @@
 import React, { JSX, useEffect, useState } from 'react';
-import { Button, Input, Typography } from '@mui/material';
+import { Button, Input, Typography, CircularProgress } from '@mui/material';
 import { useInput } from './hook/useInput';
 import { useLogin } from './hook/useLogin';
-import { useNavigate } from 'react-router-dom';
 
 function PageLogin() {
   const id = useInput();
   const pw = useInput();
   const { isLogin, loginInfo } = useLogin();
+  const [loading, setLoading] = useState<boolean>(false);
 
   const handleLogin = () => {
     window.sessionStorage.setItem(
@@ -19,6 +19,8 @@ function PageLogin() {
   const handleLogOut = () => {
     window.sessionStorage.removeItem('login');
   };
+
+  if (loading) return <CircularProgress />;
 
   return (
     <>

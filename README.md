@@ -4,7 +4,7 @@ react 스터디 프로젝트
 
 ## 기술스택
 
-react, typescript, recoil, react-query.. 
+react, typescript, recoil, react-query, yarn berry.. 
 
 ## 주제
 

@@ -11,7 +11,7 @@ export const getMovies = async (page: number) => {
         }
       }
     )
-    .then((res) => {
+    .then(async (res) => {
       return res.data;
     });
 

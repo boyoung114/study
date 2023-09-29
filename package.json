@@ -8,6 +8,7 @@
     "@mui/material": "^5.14.11",
     "@mui/styled-engine-sc": "^5.14.11",
     "@tanstack/react-query": "^4.35.3",
+    "@tanstack/react-query-devtools": "^4.35.3",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -15,14 +16,16 @@
     "@types/node": "^16.18.54",
     "@types/react": "^18.2.23",
     "@types/react-dom": "^18.2.8",
+    "@types/react-infinite-scroller": "^1.2.3",
+    "@typescript-eslint/eslint-plugin": "^6.7.3",
     "axios": "^1.5.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-infinite-scroller": "^1.2.6",
     "react-router-dom": "^6.16.0",
     "react-scripts": "5.0.1",
     "react-uuid": "^2.0.0",
     "recoil": "^0.7.7",
-    "styled-components": "^6.0.8",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
@@ -51,10 +54,10 @@
     ]
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.7.3",
     "@typescript-eslint/parser": "^6.7.3",
     "eslint": "^8.50.0",
     "eslint-plugin-react": "^7.33.2",
     "prettier": "^3.0.3"
-  }
+  },
+  "packageManager": "yarn@3.6.3"
 }

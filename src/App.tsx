@@ -5,6 +5,7 @@ import PageLogin from './PageLogin';
 import PageTimer from './PageTimer';
 import PageScroll from './PageScroll';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 
 function App() {
   const queryClient = new QueryClient();
@@ -17,6 +18,7 @@ function App() {
           <Route path='/timer' element={<PageTimer />} />
         </Route>
       </Routes>
+      <ReactQueryDevtools />
     </QueryClientProvider>
   );
 }

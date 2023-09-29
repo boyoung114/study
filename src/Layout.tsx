@@ -9,8 +9,8 @@ function Layout() {
 
       <aside
         style={{
-          width: 200,
-          height: 900,
+          width: 140,
+          height: 500,
           border: '1px solid black',
           float: 'left'
         }}
@@ -28,8 +28,10 @@ function Layout() {
       <div
         style={{
           float: 'left',
-          width: 400,
-          height: 900
+          width: 680,
+          height: 500,
+          border: '1px solid black',
+          overflow: 'auto'
         }}
       >
         <Outlet />
