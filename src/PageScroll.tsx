@@ -18,6 +18,7 @@ function PageScroll() {
       },
       {
         enabled: !!isLogin,
+        suspense: true,
         refetchOnWindowFocus: false,
         getNextPageParam: (lastPage, allPosts) => {
           return lastPage.page != allPosts[0].total_pages
@@ -27,7 +28,7 @@ function PageScroll() {
       }
     );
 
-  if (isLoading && isLogin) return <CircularProgress />;
+  //if (isLoading && isLogin) return <CircularProgress />;
   if (isError && isLogin) return <h3>잘못된 데이터 입니다.</h3>;
 
   return (
