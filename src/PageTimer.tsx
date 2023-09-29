@@ -9,35 +9,50 @@ import {
   FormControl,
   ButtonGroup
 } from '@mui/material';
+import Timer from './PageTimer2';
+import moment from 'moment';
 
 function PageTimer() {
+  const [endTime, setEndTime] = useState<number>(0);
   const [select, setSelect] = useState<string>('s');
   const [time, setTime] = useState<number>(0);
   const [inputTime, setInputTime] = useState<number>(0);
   const [flag, setFlag] = useState<boolean>(false);
+
+  //시간 플러스
   const handlePlusTime = () => {
     const new_time =
       inputTime * (select === 'h' ? 3600 : select === 'm' ? 60 : 1);
     setTime(time + new_time);
   };
 
+  //시간 마이너스
   const handleMinusTime = () => {
     const new_time =
       inputTime * (select === 'h' ? 3600 : select === 'm' ? 60 : 1);
     setTime(time - new_time > 0 ? time - new_time : 0);
   };
 
+  //남은 시간 계산
+  const handleGetLeftTime = () => {
+    const now = new Date().getTime();
+    return endTime - now;
+  };
+
   let timer: any;
+
   useEffect(() => {
     console.log(flag);
     if (flag) {
       timer = setInterval(() => {
-        setTime((time) => time - 1);
+        const leftTime = handleGetLeftTime();
+        setTime(Math.ceil(leftTime / 1000));
       }, 1000);
 
       console.log(time);
-      if (time === 0) {
+      if (time <= 0) {
         setFlag(false);
+        setEndTime(0);
         clearInterval(timer);
       }
     }
@@ -50,6 +65,7 @@ function PageTimer() {
 
   return (
     <div className='App'>
+      {/*<Timer duration={5} />*/}
       <Box mt={2} textAlign={'center'}>
         <Typography
           variant='h2'
@@ -107,6 +123,7 @@ function PageTimer() {
           <Button
             onClick={() => {
               setFlag(true);
+              setEndTime(new Date().getTime() + time * 1000);
             }}
             variant={'contained'}
             disabled={time < 1 || flag}
