@@ -25,8 +25,14 @@ function Layout() {
           <Link to='/timer'>page - timer</Link>
         </div>
         <div>
-          <Link to='/calculator'>page - calculator</Link>
+          <Link to='/promise'>page - promise 연습</Link>
         </div>
+        {/*<div>*/}
+        {/*  <Link to='/calculator'>page - calculator(공사중)</Link>*/}
+        {/*</div>*/}
+        {/*<div>*/}
+        {/*  <Link to='/cart'>page - cart</Link>*/}
+        {/*</div>*/}
       </aside>
       <div
         style={{

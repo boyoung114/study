@@ -1,17 +1,15 @@
 import React, { Suspense, lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
-//import Layout from './Layout';
-// import PageLogin from './PageLogin';
-// import PageTimer from './PageTimer';
-// import PageScroll from './PageScroll';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
-import PageCalculator from './PageCalculator';
 
 const Layout = lazy(() => import('./Layout'));
-const PageLogin = lazy(() => import('./PageLogin'));
-const PageScroll = lazy(() => import('./PageTimer'));
-const PageTimer = lazy(() => import('./PageScroll'));
+const PageLogin = lazy(() => import('./page/PageLogin'));
+const PageScroll = lazy(() => import('./page/PageTimer'));
+const PageTimer = lazy(() => import('./page/PageScroll'));
+const PageCart = lazy(() => import('./page/PageCart'));
+const PageCalculator = lazy(() => import('./page/PageCalculator'));
+const PagePromise = lazy(() => import('./page/PagePromise'));
 
 function App() {
   const queryClient = new QueryClient();
@@ -23,6 +21,8 @@ function App() {
           <Route path='/scroll' element={<PageScroll />} />
           <Route path='/timer' element={<PageTimer />} />
           <Route path='/calculator' element={<PageCalculator />} />
+          <Route path='/cart' element={<PageCart />} />
+          <Route path='/promise' element={<PagePromise />} />
         </Route>
       </Routes>
       <ReactQueryDevtools />

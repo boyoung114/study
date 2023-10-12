@@ -1,7 +1,7 @@
 import React, { JSX, useEffect, useState } from 'react';
 import { Button, Input, Typography, CircularProgress } from '@mui/material';
-import { useInput } from './hook/useInput';
-import { useLogin } from './hook/useLogin';
+import { useInput } from '../hook/useInput';
+import { useLogin } from '../hook/useLogin';
 
 function PageLogin() {
   const id = useInput();
