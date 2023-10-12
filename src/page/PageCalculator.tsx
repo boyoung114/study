@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { useLogin } from './hook/useLogin';
+import { useLogin } from '../hook/useLogin';
 import { useInfiniteQuery } from '@tanstack/react-query';
-import { getMovies } from './apis/api';
-import CardElement from './components/Card';
+import { getMovies } from '../apis/api';
+import CardElement from '../components/Card';
 import InfiniteScroll from 'react-infinite-scroller';
-import { IResultType } from './types/type';
+import { IResultType } from '../types/type';
 import {
   Button,
   Box,
